@@ -53,6 +53,24 @@ This lesson introduces you to missing data:
 * or the data are **NMAR** - seek additional statistical advice
 * consider possible multiple imputation (MI) or maximum likelihood (ML) estimation options for your modeling.
 
+5. Keep in mind that sometimes you have to consider the impact of intermittent missing data across multiple variables. For example, suppose you have 5 variables and each one is only missing a few responses each, but if you put all 5 together in a model - the default in nearly all statistical software - at least without setting alternate options - is to treat the missing data "listwise" and remove all row/subjects with any missing data on any of these 5 variables. So you could easily end up with much more missing data impact than you originally expected. The same advice applies, however. 
+    - create an indicator variable to tell you if there is missing data for that row/subject for any of these 5 variables - you could even count the number of variables with missing data for each individual row/subject. For example:
+    
+| var1 | var2 | var3 | var4 | var5 | nmiss| missingYN |
+|------|------|------|------|------|------|-----------|
+| 12   | w    |      | 3    | 1    | 1    | 1         |
+| 13   | b    | 55   | 2    | 2    | 0    | 0         |
+|      | b    | 56   | 1    | 2    | 1    | 1         |
+| 34   |      | 87   | 2    | 1    | 1    | 1         |
+|      | w    | 88   | 1    | 2    | 1    | 1         |
+| 15   | w    |      | 3    |      | 2    | 1         |
+| 10   | b    | 90   | 2    | 1    | 0    | 0         |
+
+
+* 
+    - then use the same approach described above to see if this indicator variable is associated with anything else in your dataset. 
+    - As you can tell, "listwise" deletion could potentially "eat up" and remove much of your data undermining your sample size and representativeness of your underlying data. Hopefully, this won't be a problem. if it is, you may have to seek alternative variables or approaches to analyzing your data.
+
 _**SIDE NOTE**: We will briefly discuss mean substitution as a possible option in the context of people skipping items on a given survey instrument - later this semester. This is a common practice for some instruments and have been built into the underlying psychometric properties of that measurement tool. **However, mean substitution is NOT RECOMMENDED as it is a BIASED method.**_
 
 ## Missing data - helpful references
