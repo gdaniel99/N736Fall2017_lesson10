@@ -21,7 +21,7 @@ This lesson introduces you to missing data:
 ## Missing data - Mechanisms
 
 * Missing Completely at Random **MCAR**
-    - For data to be **MCAR** means that the data that are missing do not depend on (are not associated with) and of the data values. The caution with this definition is that it is still possible the data might be missing due to some unobserved (un-measured) variable. We can't directly determine this since the data were unobserved (can't quantify an unknown).
+    - For data to be **MCAR** means that the data that are missing do not depend on (are not associated with) any of the data values. The caution with this definition is that it is still possible the data might be missing due to some unobserved (un-measured) variable. We can't directly determine this since the data were unobserved (can't quantify an unknown).
 
 * Missing at Random **MAR**
     - For data to be **MAR** means that the missing data are associated with another observed variable or variables but NOT to it's own value. If we include these associated variables in our models we are "adjusting for" or "accounting for" the missing data mechanism. I've also heard this referred to or related to "Covariate - dependent missingness"; re: Don Hedeker [http://www.caldar.org/presentations/summer%20institute/2015/Day2/Hedeker.pdf](http://www.caldar.org/presentations/summer%20institute/2015/Day2/Hedeker.pdf) and [http://bstt513.class.uic.edu/index.html](http://bstt513.class.uic.edu/index.html) - see Chapter 14 on "Missing Data"
