@@ -1,0 +1,20 @@
+---
+title: "Missing Data"
+author: "Melinda K. Higgins, PhD."
+date: "September 27, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lesson 10: An Introduction and Discussion of Missing Data
+
+This lesson introduces you to missing data:
+
+* how to find, identify and review missing data
+* how to visualize missing data
+* types of missing data mechanisms
+* what to do next
+
